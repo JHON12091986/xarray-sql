@@ -1,0 +1,100 @@
+[33mf085271[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeat/issue-203-fix-columns[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/feat/issue-203-fix-columns[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m Exact table statistics for the optimizer (DataFusion 54) (#201)
+[33m6ee981d[m bump cargo version.
+[33mffaed30[m test: peak-memory integration tests for the lazy round-trip (#199)
+[33mfe07ff7[m Geospatial SQL benchmark suite: prove core geo/climate ops are relational (#177)
+[33m8bd0063[m Build abi3 wheels so installs don't recompile on macOS/Windows (#198)
+[33ma5faf1a[m feat: skip per-dim discovery scans when query is an unfiltered scan (#193)
+[33mc656dda[m docs: add quickstart and note gcsfs requirement (#188)
+[33m6fede7a[m Increment version -- to_dataset()
+[33m47f30ff[m Make dask optional when reading Zarr datasets (#176)
+[33md5814b5[m Add lazy SQL → xarray round-trip via XarrayDataFrame.to_dataset (closes #58) (#167)
+[33m10b7ad5[m Support heterogeneous datasets with scalar variables in from_dataset (#169)
+[33m3ba54ea[m Fix link in README to duckdb-zarr. Main Roadmap issue is closed.
+[33md0deb34[m Attempt to fix publish process.
+[33mbcc4993[m Nit on readme demo.
+[33m061f443[m Bump cargo version for new release.
+[33m15231d3[m Made new xarray context behavior to register multiple tables from a dataset (#166)
+[33m3adf6af[m indentation + ruff (#164)
+[33mb9a1e26[m Increment version in prep for the v0.2.2 release (#160)
+[33m65d8464[m Add cftime support (#149)
+[33mac825d7[m New attribution. (#159)
+[33m86734ae[m Fix documentation formatting issues (#158)
+[33m5176113[m Fix null conversion (#151)
+[33m1382e91[m Documentation fixes: faster, correct URL. (#157)
+[33mf270bbf[m Docs infra (#156)
+[33m7ba9be0[m Revised the README with recent context.
+[33mfbb5c60[m Skip string coordinates in partition bound computation (#153)
+[33m67f075a[m Migrate tests (#155)
+[33mf1f6694[m Increase cargo version (minor). (#143)
+[33m4d63eff[m Upgrade to DataFusion 52.0.0 (#142)
+[33m2de1342[m Column Projection Pushdown (#119)
+[33mf685712[m Improve concurrency by releasing the GIL between batches. (#137)
+[33m0a99dd1[m Iterate through metadata instead of materializing it all up front. (#136)
+[33mb5242e3[m Iterating through block into multiple record batches per partition. (#135)
+[33m77d29f1[m Convert a Xarray Dataset partition to a pyarrow record batch directly (without going through pandas). (#134)
+[33m43a8aac[m Update gitignore: coding assistant tools.
+[33mf44a73a[m Xarray-specific filter predicate pushdown. (#113)
+[33m17bc410[m replace typing module with native collection types (#120)
+[33m2cde4e5[m fix: perf_tests scripts to use pyarrow or LazyArrowStreamTable (#111)
+[33m43a447f[m Improvements inspired by latest datafusion-python build file. (#117)
+[33m0e837ae[m Pair down size of final wheel via cargo exclude. (#116)
+[33m34028ec[m publish: rm --username.
+[33md5886b4[m Manual version bump for now.
+[33m9fd8ac1[m Fix release script tag getting processes.
+[33m4c60b48[m Explicitly getting tags (#115)
+[33mcfa5087[m Adding Python to the manylinux arm64 release build (#114)
+[33m01a5dba[m Parallel Xarray record batch reading via blocks partition factory. (#108)
+[33m199b4ae[m README update given deeper integration with DataFusion (#109)
+[33ma1cafbf[m Lazy datafusion registration via custom table provider (#100)
+[33mbf7711d[m Bump pypa/gh-action-pypi-publish from 1.4.2 to 1.13.0 in /.github/workflows (#96)
+[33m15b34cd[m Updated the roadmap
+[33m33ebf06[m Adding back in lazy xr.Dataset and metadata parsing fix. (#94)
+[33mfa436e8[m Add pre-commit hooks with pyink and mypy (#91)
+[33m7414128[m Added a roadmap to the readme. (#90)
+[33m2f346bf[m Nit: add space
+[33m2c102b6[m Linking to hytradboi talk
+[33m599f86f[m Convert tests from unittest to pytest format (#76)
+[33m900cb5f[m Dask dependency is only needed for tests. (#80)
+[33m1228c1a[m Lazy read_xarray with iterables and parsing metadata. (#81)
+[33mc3b4b00[m A few more copy/edits. (#78)
+[33mbedf078[m Update CONTRIBUTING.md
+[33mbfbf579[m Refreshed the documentation (#72)
+[33mc3bcc8b[m Comprehensive SQL test cases. (#65)
+[33m40bf411[m Minor documentation and typing update. (#64)
+[33mc0ffceb[m More efficient `read_xarray` implementation with `from_map_batched` (#63)
+[33m0577963[m Refresh pypy release automation. (#62)
+[33m94f31e8[m Migrate to DataFusion. (#61)
+[33m4a09823[m Orient the project around uv. (#60)
+[33mf06df9f[m chunks (#56)
+[33m11dc7bf[m Dataframe includes non-dimension columns. (#50)
+[33m36b0317[m Reformat code with latest version of pyink. (#51)
+[33m84dd29c[m Fix typo (#48)
+[33mdfa21c5[m Update CONTRIBUTING.md - added notes for making PRs.
+[33mb564961[m Update README.md - nit in the why section.
+[33ma0d4aa2[m Added the incredibly helpful collaborators from the Pangeo discord. (#43)
+[33m13c5511[m Added install instructions to README.md (#42)
+[33mb67f8eb[m Rename to xarray-sql. (#41)
+[33m3e83c0e[m Added sponsors and contributors section (#40)
+[33m36f8d68[m Added CI and Lint status badges to README.md. (#39)
+[33m45800f6[m Added core project actions. (#38)
+[33m5919dce[m Update README.md - Added hypothesis.
+[33m64f690a[m Update README.md - Chunks in the right
+[33m6a185e6[m Update README.md - added chunks arg
+[33m2112924[m Update README.md - edited last paragraph
+[33m2335668[m Copy edit nit.
+[33m7bf9ab3[m Copy/Editing.
+[33m0353bfc[m Updated README.MD
+[33m5fe7b0e[m Adding explicit support for SQL (#32)
+[33m5435e88[m Simplifying unravel logic (#31)
+[33md86f447[m Fix remove polyglot: Remaining pkg import. (#30)
+[33meab5f3d[m Remove SQL-Polyglot (#29)
+[33m35f910f[m Turning on Dask-Expr (#28)
+[33m1de22ff[m NumPy Cross-Product for Coords. (#25)
+[33m81156bd[m Added support for Dask Dataframe chunks. (#24)
+[33m7da2184[m Added more metadata to Dask Dataframe creation (#19)
+[33mcdc5d41[m NumPy implementation of `unravel()`. (#12)
+[33m429e5b4[m [Draft] Investigating SQL Support. (#11)
+[33mc75c10b[m Dataframe converter (#9)
+[33m5da82bc[m Copy edits to the README.
+[33m15b5735[m POC: Execution via an `xarray.Dataset` Table. (#1)
+[33m9c84cc1[m Initial commit.

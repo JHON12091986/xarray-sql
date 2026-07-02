@@ -79,7 +79,6 @@ class XarrayContext:
         if hasattr(ds, 'chunks') and ds.chunks is not None:
             total_chunks = sum(len(c) for c in ds.chunks.values())
             if total_chunks > max_partitions:
-                # Combinar fragmentos en particiones limitadas
                 factor = max(1, total_chunks // max_partitions)
                 ds = ds.chunk({dim: factor for dim in ds.dims})
         
@@ -158,7 +157,7 @@ class XarrayContext:
         
         Args:
             df: DataFrame a convertir.
-            dims: Dimensiones para el Dataset (opcional).
+            dims: Dimensiones para el Dataset (opcional). Si no se proporcionan, se infieren automáticamente.
         
         Returns:
             xr.Dataset: Dataset convertido.
