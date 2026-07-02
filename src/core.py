@@ -1,5 +1,7 @@
 import xarray as xr
 import pandas as pd
+import pyarrow as pa
+import pyarrow.compute as pc
 from typing import Dict, Optional, Any, List, Tuple, Union
 
 class XarrayContext:
@@ -217,3 +219,35 @@ class XarrayContext:
         if not tables_info:
             tables_info = "  (No tables registered)"
         return f"XarrayContext(tables={len(self._tables)}):\n{tables_info}"
+
+    @staticmethod
+    def unique_struct_array(struct_array: pa.StructArray) -> pa.Array:
+        """
+        Utiliza pyarrow.compute.unique para obtener valores únicos de un struct array.
+        
+        Args:
+            struct_array: PyArrow StructArray.
+        
+        Returns:
+            pa.Array: Array con valores únicos.
+        """
+        if not isinstance(struct_array, pa.StructArray):
+            raise TypeError("Expected a PyArrow StructArray")
+        
+        try:
+            return pc.unique(struct_array)
+        except Exception as e:
+            raise RuntimeError(f"Error computing unique values: {e}")
+
+    def process_struct_arrays(self, data: Any) -> Any:
+        """
+        Procesa estructuras utilizando pyarrow.compute.unique.
+        """
+        if isinstance(data, pa.StructArray):
+            return self.unique_struct_array(data)
+        elif isinstance(data, dict):
+            return {k: self.process_struct_arrays(v) for k, v in data.items()}
+        elif isinstance(data, list):
+            return [self.process_struct_arrays(item) for item in data]
+        else:
+            return data
